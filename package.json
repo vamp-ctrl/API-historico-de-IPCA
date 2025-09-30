@@ -1,0 +1,24 @@
+{
+  "name": "api-historico-de-ipca",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vamp-ctrl/API-historico-de-IPCA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vamp-ctrl/API-historico-de-IPCA/issues"
+  },
+  "homepage": "https://github.com/vamp-ctrl/API-historico-de-IPCA#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
