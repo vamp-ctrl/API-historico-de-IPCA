@@ -5,7 +5,11 @@ import {
   buscarTodos,
   buscarMediaPorAno,
   buscarUltimoDado
+<<<<<<< HEAD
 } from "./Servicos/servico.js";
+=======
+} from "../Servicos/servico.js";
+>>>>>>> c90fea731254fef889a03211d422b2ccff5883d9
 const PORT = process.env.PORT || 8080;
 
 const app = express();
