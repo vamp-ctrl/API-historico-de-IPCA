@@ -1,5 +1,5 @@
 // servico.js
-import dadosIPCA from './Dados/dados.js';
+import dadosIPCA from '../Dados/dados.js';
 
 export function buscarPorAno(ano) {
   return dadosIPCA.filter(item => item.ano === Number(ano));
