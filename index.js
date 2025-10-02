@@ -63,6 +63,5 @@ app.get('/ipca', (req, res) => {
 
 // Iniciar servidor
 app.listen(PORT, () => {
-  const data = new Date();
-  console.log(`Servidor rodando na porta ${PORT} - ${data.toLocaleString()}`);
+  console.log(`Servidor rodando na porta ${PORT}`);
 });

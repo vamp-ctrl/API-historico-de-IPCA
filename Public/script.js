@@ -3,7 +3,6 @@ document.getElementById('loadDataBtn').addEventListener('click', async () => {
   dataContainer.innerHTML = '<p>Carregando...</p>';
 
   try {
-    // Agora usamos apenas a rota relativa, sem URL completa
     const response = await fetch('/ipca');
     const data = await response.json();
 
@@ -14,7 +13,7 @@ document.getElementById('loadDataBtn').addEventListener('click', async () => {
         div.classList.add('data-item');
         div.innerHTML = `
           <h3>${item.mes} / ${item.ano}</h3>
-          <p><strong>IPCA:</strong> ${item.valor}</p>
+          <p>${item.valor}%</p>
         `;
         dataContainer.appendChild(div);
       });
