@@ -1,4 +1,6 @@
 import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
 import {
   buscarPorAno,
   buscarPorMesEAno,
@@ -6,10 +8,20 @@ import {
   buscarMediaPorAno,
   buscarUltimoDado
 } from "./Servicos/servico.js";
-const PORT = process.env.PORT || 8080;
 
+// Configuração __dirname para ES Modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Criar app Express
 const app = express();
 
+// Servir arquivos estáticos da pasta public
+app.use(express.static(path.join(__dirname, 'public')));
+
+const PORT = process.env.PORT || 8080;
+
+// Rotas da API
 app.get('/ipca', (req, res) => {
   const { ano, mes, media, ultimo } = req.query;
 
@@ -49,7 +61,7 @@ app.get('/ipca', (req, res) => {
   return res.json(buscarTodos());
 });
 
-
+// Iniciar servidor
 app.listen(PORT, () => {
   const data = new Date();
   console.log(`Servidor rodando na porta ${PORT} - ${data.toLocaleString()}`);
