@@ -17,7 +17,7 @@ const __dirname = path.dirname(__filename);
 const app = express();
 
 // Servir arquivos estáticos da pasta public
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'Public')));
 
 const PORT = process.env.PORT || 8080;
 
